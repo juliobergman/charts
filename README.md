@@ -1,4 +1,4 @@
-# Laravel Vue API
+# Laravel Based
 
 ## Laravel
 
