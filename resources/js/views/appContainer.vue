@@ -9,13 +9,30 @@
             <v-spacer></v-spacer>
             <!--  -->
             <div>
+                <v-tooltip bottom>
+                    <template v-slot:activator="{ on }">
+                        <v-btn
+                            elevation="1"
+                            x-small
+                            v-on="on"
+                            color="#24292E"
+                            fab
+                            href="https://github.com/juliobergman/charts"
+                            target="_blank"
+                            class="mr-3"
+                        >
+                            <v-icon>mdi-github</v-icon>
+                        </v-btn>
+                    </template>
+                    <span>View on Github</span>
+                </v-tooltip>
                 <v-tooltip v-if="!$vuetify.theme.dark" bottom>
                     <template v-slot:activator="{ on }">
                         <v-btn
                             elevation="1"
                             x-small
                             v-on="on"
-                            color="primary"
+                            color="accent"
                             fab
                             @click="darkMode"
                         >
@@ -33,7 +50,7 @@
                             elevation="1"
                             x-small
                             v-on="on"
-                            color="primary"
+                            color="accent"
                             fab
                             @click="darkMode"
                         >
