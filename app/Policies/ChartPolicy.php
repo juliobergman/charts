@@ -54,9 +54,9 @@ class ChartPolicy
      */
     public function update(User $user, Chart $chart)
     {
-        return $user->id === $chart->user_id
-                ? Response::allow()
-                : Response::deny('Permission to delete Chart Denied');
+        return $user->id == $chart->user_id
+                ? Response::allow('Chart Update Access')
+                : Response::deny('Permission to update Chart Denied');
 
     }
 
@@ -69,8 +69,8 @@ class ChartPolicy
      */
     public function delete(User $user, Chart $chart)
     {
-        return $user->id === $chart->user_id
-                ? Response::allow()
+        return $user->id == $chart->user_id
+                ? Response::allow('Chart Delete Access')
                 : Response::deny('Permission to delete Chart Denied');
 
     }

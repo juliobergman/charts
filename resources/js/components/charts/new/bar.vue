@@ -434,7 +434,9 @@ export default {
                 type: this.chartType
             };
 
-            this.$emit("savechart", saveData);
+            console.log(saveData);
+
+            // this.$emit("savechart", saveData);
         }
     },
     created() {
